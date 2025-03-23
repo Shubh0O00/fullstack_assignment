@@ -1,0 +1,223 @@
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  /* Fixed Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #007bff;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px;
+  }
+  
+  /* Header Buttons Container */
+  .headerButtons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Create Ticket Button */
+  .createButton {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .createButton:hover {
+    background: #218838;
+  }
+  
+  /* Log Out Button */
+  .logoutButton {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .logoutButton:hover {
+    background: #c82333;
+  }
+  
+  /* Scrollable Ticket List Container */
+  .ticketListContainer {
+    margin-top: 70px; /* Starts below the fixed header */
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
+  }
+  
+  /* Ticket List Styling */
+  .ticketList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Individual Ticket Item Styling */
+  .ticketItem {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ticketItem strong {
+    font-size: 16px;
+  }
+  
+  .ticketItem p {
+    margin: 5px 0;
+  }
+  
+  .ticketItem span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Action Buttons for Support Member */
+  .buttonGroup {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .buttonGroup button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .buttonGroup button:first-child {
+    background: #007bff;
+    color: white;
+  }
+  
+  .buttonGroup button:last-child {
+    background: #28a745;
+    color: white;
+  }
+  
+  /* Modal Overlay */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Box */
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Close Button for Modal */
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  /* Modal Inputs & Textarea */
+  .modal input,
+  .modal textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Button Group in Modal */
+  .modal .buttonGroup {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Modal Submit Button */
+  .modal .buttonGroup button:first-child {
+    background: #28a745;
+    color: white;
+  }
+  
+  /* Modal Cancel Button */
+  .modal .buttonGroup button:last-child {
+    background: #dc3545;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .headerButtons {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .createButton,
+    .logoutButton {
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+  

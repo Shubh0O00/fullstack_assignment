@@ -1,0 +1,42 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .button {
+    flex: 1;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
